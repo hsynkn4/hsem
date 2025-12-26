@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>30 Mayıs ❤️ Sonsuza Kadar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff4f8b, #ff9acb);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: rgba(0,0,0,0.35);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      max-width: 420px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .date {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .heart {
+      font-size: 3rem;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Bizim Hikâyemiz</h1>
+    <div class="date">30 Mayıs 2018</div>
+    <div class="counter" id="days">...</div>
+    <p>gündür birlikteyiz</p>
+    <footer>
+      Sonsuza kadar sen 🥂
+    </footer>
+  </div>
+
+  <script>
+    const startDate = new Date("2018-05-30");
+    const today = new Date("2025-12-26");
+    const diffTime = today - startDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("days").innerText = diffDays + " gün";
+  </script>
+</body>
+</html>
